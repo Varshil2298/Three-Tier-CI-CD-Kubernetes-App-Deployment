@@ -82,12 +82,12 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'GITHUB', url: 'https://github.com/Varshil2298/Three-Tier-CI-CD-Kubernetes-App-Deployment.git'
+                git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/Varshil2298/Three-Tier-CI-CD-Kubernetes-App-Deployment.git'
             }
         }
         stage('Update Deployment file') {
             environment {
-                GIT_REPO_NAME = "End-to-End-Kubernetes-Three-Tier-DevSecOps-Project"
+                GIT_REPO_NAME = "Three-Tier-CI-CD-Kubernetes-App-Deployment"
                 GIT_USER_NAME = "Varshil2298"
             }
             steps {
