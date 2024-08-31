@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git credentialsId: 'GITHUB', url: 'https://github.com/volley123/End-to-End-Kubernetes-Three-Tier-DevSecOps-Project.git'
+                git credentialsId: 'GITHUB', url: 'https://github.com/Varshil2298/Three-Tier-CI-CD-Kubernetes-App-Deployment.git'
             }
         }
         stage('Sonarqube Analysis') {

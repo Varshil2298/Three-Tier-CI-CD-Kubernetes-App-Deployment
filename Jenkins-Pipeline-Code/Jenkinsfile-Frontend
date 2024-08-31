@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Checkout from Git') {
             steps {
-                git credentialsId: 'GITHUB', url: 'https://github.com/volley123/End-to-End-Kubernetes-Three-Tier-DevSecOps-Project.git'
+                git credentialsId: 'GITHUB', url: 'https://github.com/Varshil2298/Three-Tier-CI-CD-Kubernetes-App-Deployment.git'
             }
         }
         stage('Sonarqube Analysis') {
@@ -82,13 +82,13 @@ pipeline {
         }
         stage('Checkout Code') {
             steps {
-                git credentialsId: 'GITHUB', url: 'https://github.com/volley123/End-to-End-Kubernetes-Three-Tier-DevSecOps-Project.git'
+                git credentialsId: 'GITHUB', url: 'https://github.com/Varshil2298/Three-Tier-CI-CD-Kubernetes-App-Deployment.git'
             }
         }
         stage('Update Deployment file') {
             environment {
                 GIT_REPO_NAME = "End-to-End-Kubernetes-Three-Tier-DevSecOps-Project"
-                GIT_USER_NAME = "volley123"
+                GIT_USER_NAME = "Varshil2298"
             }
             steps {
                 dir('Kubernetes-Manifests-file/Frontend') {
